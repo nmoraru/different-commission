@@ -89,4 +89,15 @@ class MainKtTest {
         assertEquals(expectedCommission, actualCommission)
     }
 
+    @Test
+    fun errorExampleForCiGithub() {
+        val cardType = "MAESTRO"
+        val amount = 30_000_00
+        val expectedCommission = 0.1
+
+        val actualCommission = commissionCalculation(cardType = cardType, amount = amount)
+
+        assertEquals(expectedCommission, actualCommission)
+    }
+
 }
